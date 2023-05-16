@@ -8,19 +8,26 @@
 <body>
 <div class="align-content-center container mt-4 col-sm-7">
     <div class="col-md-7">
-        <div class="col-md-7" >
+        <div class="col-md-7">
             <h4 class="text-center">Mass Converter</h4>
 
         </div>
         <br>
         <form>
             <div class="form-group">
-                <label for="pounds">Pounds
                 <input type="number"
                        class="form-control form-control-lg"
                        id="pounds"
                        placeholder="lb">
-                </label>
+                <select name="cars" id="initial_unit">
+                    <option value=0.2>Карат</option>
+                    <option value=1>Грамм</option>
+                    <option value=28.349523125>Унций</option>
+                    <option value=453.59237>Фунтов</option>
+                    <option value=1000>Килограмм</option>
+                    <option value=100000>Центнеров</option>
+                    <option value=1000000>Тонн</option>
+                </select>
 
             </div>
 
@@ -29,9 +36,17 @@
         <div class="" id="output">
             <div class="">
                 <div class="">
-                    <h5 class="">Kilograms</h5>
-                    <p id="kilograms" class="card-text"></p>
-
+                    <h5 class="">Target</h5>
+                    <p id="target" class="card-text"></p>
+                    <select name="cars" id="target_unit">
+                        <option value=0.2>Карат</option>
+                        <option value=1>Грамм</option>
+                        <option value=28.349523125>Унций</option>
+                        <option value=453.59237>Фунтов</option>
+                        <option value=1000>Килограмм</option>
+                        <option value=100000>Центнеров</option>
+                        <option value=1000000>Тонн</option>
+                    </select>
                 </div>
 
             </div>
