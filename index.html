@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <title>Mass Converter</title>
-    <link href="styles/bootstrap4-retro.min.css" rel="stylesheet">
 </head>
 <body>
 <div class="align-content-center container mt-4 col-sm-7">
@@ -18,15 +17,17 @@
                 <input type="number"
                        class="form-control form-control-lg"
                        id="pounds"
-                       placeholder="lb">
+                       placeholder="">
                 <select name="cars" id="initial_unit">
-                    <option value=0.2>Карат</option>
-                    <option value=1>Грамм</option>
-                    <option value=28.349523125>Унций</option>
-                    <option value=453.59237>Фунтов</option>
-                    <option value=1000>Килограмм</option>
-                    <option value=100000>Центнеров</option>
-                    <option value=1000000>Тонн</option>
+                    <option value=0.001>мм</option>
+                    <option value=0.01>см</option>
+                    <option value=0.0254>дюйм</option>
+                    <option value=0.3048>фут</option>
+                    <option value=0.9144>ярд</option>
+                    <option value=0.1>дм</option>
+                    <option value=1>м</option>
+                    <option value=1000>км</option>
+                    <option value=1600>миля</option>
                 </select>
 
             </div>
@@ -37,15 +38,21 @@
             <div class="">
                 <div class="">
                     <h5 class="">Target</h5>
-                    <p id="target" class="card-text"></p>
+                    <input type="number"
+                           class="form-control form-control-lg"
+                           id="target"
+                           readonly="readonly"
+                           placeholder="">
                     <select name="cars" id="target_unit">
-                        <option value=0.2>Карат</option>
-                        <option value=1>Грамм</option>
-                        <option value=28.349523125>Унций</option>
-                        <option value=453.59237>Фунтов</option>
-                        <option value=1000>Килограмм</option>
-                        <option value=100000>Центнеров</option>
-                        <option value=1000000>Тонн</option>
+                        <option value=0.001>мм</option>
+                        <option value=0.01>см</option>
+                        <option value=0.0254>дюйм</option>
+                        <option value=0.3048>фут</option>
+                        <option value=0.9144>ярд</option>
+                        <option value=0.1>дм</option>
+                        <option value=1>м</option>
+                        <option value=1000>км</option>
+                        <option value=1600>миля</option>
                     </select>
                 </div>
 

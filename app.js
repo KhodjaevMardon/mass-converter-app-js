@@ -10,5 +10,5 @@ function convertToKilos() {
     let initial_multiplier = document.querySelector('#initial_unit').value;
     let target_multiplier = document.querySelector('#target_unit').value;
     let kilos = pounds.value * initial_multiplier / target_multiplier;
-    document.querySelector('#target').textContent = kilos;
+    document.querySelector('#target').value = kilos.toPrecision(Math.log10(kilos) + 3);
 }
