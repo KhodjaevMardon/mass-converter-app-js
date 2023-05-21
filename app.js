@@ -1,20 +1,18 @@
-let pounds = document.querySelector('#pounds');
-pounds.addEventListener('input', convertToKilos);
-// let init_unit = document.querySelector('#initial_unit');
-// init_unit.addEventListener('change', convertToKilos);
-// let target_unit = document.querySelector('#target_unit');
-// target_unit.addEventListener('change', convertToKilos);
+let initial_string = document.querySelector('#initial_string');
+initial_string.addEventListener('input', convertToKilos);
 
 
 function convertToKilos() {
-    let split = pounds.value.split(" ");
+    let split = initial_string.value.split(" ");
     let initial_multiplier = getMultiplier(split[1]);
     let target_multiplier = getMultiplier(split[4]);
     let kilos = parseFloat(split[0]) * initial_multiplier / target_multiplier;
     console.log(kilos);
-    split[3] = kilos.toPrecision(Math.log10(kilos) + 3);
+    split[3] = kilos.toPrecision(Math.log10(kilos) + 4);
     console.log(split.join(" "));
-    document.querySelector('#target').value = split.join(" ");
+    if (!isNaN(kilos)) {
+        document.querySelector('#target').value = split.join(" ");
+    }
 }
 
 function getMultiplier(a) {

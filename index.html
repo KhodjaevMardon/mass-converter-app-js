@@ -3,33 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <title>Mass Converter</title>
-    <link href="styles/bootstrap4-retro.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
 </head>
 <body>
 <div class="align-content-center container mt-4 col-sm-7">
     <div class="col-md-7">
         <div class="col-md-7">
-            <h4 class="text-center">Mass Converter</h4>
+            <h4 class="text-center">Конвертер мер тяжести</h4>
 
         </div>
         <br>
-        <form>
+        <form style="display: flex">
             <div class="form-group">
                 <input type="text"
                        class="form-control form-control-lg"
-                       id="pounds"
+                       id="initial_string"
                        size="50"
                        placeholder="">
-<!--                <select name="cars" id="initial_unit">-->
-<!--                    <option value=0.2>Карат</option>-->
-<!--                    <option value=1>Грамм</option>-->
-<!--                    <option value=28.349523125>Унций</option>-->
-<!--                    <option value=453.59237>Фунтов</option>-->
-<!--                    <option value=1000>Килограмм</option>-->
-<!--                    <option value=100000>Центнеров</option>-->
-<!--                    <option value=1000000>Тонн</option>-->
-<!--                </select>-->
 
+            </div>
+            <div>
+                <table>
+                    <tr>
+                        <th>Единица измерения</th>
+                        <th>Значение в граммах</th>
+                    </tr>
+                    <tr>
+                        <td>1 карат (ка)</td>
+                        <td>0.2 гр</td>
+                    </tr>
+                    <tr>
+                        <td>1 унция (у)</td>
+                        <td>28.349523125 гр</td>
+                    </tr>
+                    <tr>
+                        <td>1 фунт</td>
+                        <td>453.59237 гр</td>
+                    </tr>
+                    <tr>
+                        <td>1 килограмм (кг)</td>
+                        <td>1000 гр</td>
+                    </tr>
+                    <tr>
+                        <td>1 центнер</td>
+                        <td>100000 гр</td>
+                    </tr>
+                    <tr>
+                        <td>1 тонна</td>
+                        <td>1000000 гр</td>
+                    </tr>
+                </table>
             </div>
 
         </form>
@@ -37,21 +60,13 @@
         <div class="" id="output">
             <div class="">
                 <div class="">
-                    <h4 class="">Result</h4>
+                    <h4 class="">Результат</h4>
                     <input type="text"
                            class="form-control form-control-lg"
                            id="target"
                            size="50"
+                           readonly="readonly"
                            placeholder="">
-<!--                    <select name="cars" id="target_unit">-->
-<!--                        <option value=0.2>Карат</option>-->
-<!--                        <option value=1>Грамм</option>-->
-<!--                        <option value=28.349523125>Унций</option>-->
-<!--                        <option value=453.59237>Фунтов</option>-->
-<!--                        <option value=1000>Килограмм</option>-->
-<!--                        <option value=100000>Центнеров</option>-->
-<!--                        <option value=1000000>Тонн</option>-->
-<!--                    </select>-->
                 </div>
 
             </div>
