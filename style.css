@@ -1,10 +1,20 @@
 table, th, td {
     border: 1px solid;
-    margin: 5px;
-    margin-left: 15px;
+    margin: 5px 5px 5px 15px;
 }
 
 th {
     padding: 5px;
 }
 
+.form-group {
+    margin: 30px 100px 30px 30px;
+}
+
+.form-result {
+    margin: 30px 100px 30px 30px;
+}
+
+label {
+    margin-bottom: 10px;
+}

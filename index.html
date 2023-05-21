@@ -9,66 +9,233 @@
 <div class="align-content-center container mt-4 col-sm-7">
     <div class="col-md-7">
         <div class="col-md-7">
-            <h4 class="text-center">Конвертер мер тяжести</h4>
+            <h2 class="text-center">QOTOQ</h2>
 
         </div>
         <br>
         <form style="display: flex">
             <div class="form-group">
-                <input type="text"
-                       class="form-control form-control-lg"
-                       id="initial_string"
-                       size="50"
-                       placeholder="">
-
+                <label>Количество витков</label>
+                <div>
+                    <input type="number"
+                           class="form-control form-control-lg"
+                           id="Wbig"
+                           size="30"
+                           placeholder="">
+                </div>
             </div>
-            <div>
-                <table>
-                    <tr>
-                        <th>Единица измерения</th>
-                        <th>Значение в граммах</th>
-                    </tr>
-                    <tr>
-                        <td>1 карат (ка)</td>
-                        <td>0.2 гр</td>
-                    </tr>
-                    <tr>
-                        <td>1 унция (у)</td>
-                        <td>28.349523125 гр</td>
-                    </tr>
-                    <tr>
-                        <td>1 фунт</td>
-                        <td>453.59237 гр</td>
-                    </tr>
-                    <tr>
-                        <td>1 килограмм (кг)</td>
-                        <td>1000 гр</td>
-                    </tr>
-                    <tr>
-                        <td>1 центнер</td>
-                        <td>100000 гр</td>
-                    </tr>
-                    <tr>
-                        <td>1 тонна</td>
-                        <td>1000000 гр</td>
-                    </tr>
-                </table>
+            <div class="form-group">
+                <label>Сила тока в катушке</label>
+                <div>
+                    <input type="number"
+                           class="form-control form-control-lg"
+                           id="I"
+                           size="30"
+                           placeholder="">
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Частота (10^8)</label>
+                <div>
+                    <input type="number"
+                           class="form-control form-control-lg"
+                           id="f"
+                           size="30"
+                           placeholder="">
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Время облучения (в часах)</label>
+                <div>
+                    <input type="number"
+                           class="form-control form-control-lg"
+                           id="T"
+                           size="30"
+                           placeholder="">
+                </div>
+            </div>
+        </form>
+        <form style="display: flex">
+            <div class="form-group">
+                <label>Диаметр (10^-2)</label>
+                <div>
+                    <input type="number"
+                           class="form-control form-control-lg"
+                           id="D"
+                           size="30"
+                           placeholder="">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Расстояние</label>
+                <div>
+                    <input type="number"
+                           class="form-control form-control-lg"
+                           id="Rbig"
+                           size="30"
+                           placeholder="">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Расстояние от источника ЭМИ</label>
+                <div>
+                    <input type="number"
+                           class="form-control form-control-lg"
+                           id="r"
+                           size="30"
+                           placeholder="">
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Относительная магнитная проницаемость среды</label>
+                <div>
+                    <input type="number"
+                           class="form-control form-control-lg"
+                           id="msmall"
+                           size="30"
+                           placeholder="">
+                </div>
+            </div>
+        </form>
+        <form style="display: flex">
+            <div class="form-group">
+                <label>Абсолютная магнитная проницаемость</label>
+                <div>
+                    <input type="number"
+                           class="form-control form-control-lg"
+                           id="ma"
+                           size="30"
+                           placeholder="">
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Электрическая проводимость (10^7)</label>
+                <div>
+                    <input type="number"
+                           class="form-control form-control-lg"
+                           id="y"
+                           size="30"
+                           placeholder="">
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Относительная диэлектрическая постоянная стержня</label>
+                <div>
+                    <input type="number"
+                           class="form-control form-control-lg"
+                           id="E"
+                           size="30"
+                           placeholder="">
+                </div>
             </div>
 
         </form>
+        <input type="button" style="margin: 40px; height: 40px; width: 200px" value="Произвести вычисления" onclick="solve()">
+
         <br>
         <div class="" id="output">
-            <div class="">
-                <div class="">
-                    <h4 class="">Результат</h4>
-                    <input type="text"
-                           class="form-control form-control-lg"
-                           id="target"
-                           size="50"
-                           readonly="readonly"
-                           placeholder="">
-                </div>
+            <H2 style="margin-top: 100px">Результаты расчётов:</H2>
+            <div>
+                <div style="display: flex">
+                    <div class="form-result">
+                        <h4 class="">Коэффициент соотношением R/r</h4>
+                        <input type="text"
+                               class="form-control form-control-lg"
+                               id="bt"
+                               size="50"
+                               readonly="readonly"
+                               placeholder="">
+                    </div>
+                    <div class="form-result">
+                        <h4 class="">Напряжённость магнитной составляющей поля катушки</h4>
+                        <input type="text"
+                               class="form-control form-control-lg"
+                               id="H"
+                               size="50"
+                               readonly="readonly"
+                               placeholder="">
+                    </div>
 
+                    <div class="form-result">
+                        <h4 class="">Плотность потока энергии (ППЭ):</h4>
+                        <input type="text"
+                               class="form-control form-control-lg"
+                               id="p"
+                               size="50"
+                               readonly="readonly"
+                               placeholder="">
+                    </div>
+                </div>
+                <div style="display: flex">
+                    <div class="form-result">
+                        <h4 class="">Допустимая величина ППЭ</h4>
+                        <input type="text"
+                               class="form-control form-control-lg"
+                               id="pd"
+                               size="50"
+                               readonly="readonly"
+                               placeholder="">
+                    </div>
+
+                    <div class="form-result">
+                        <h4 class="">Ослабление электромагнитного поля</h4>
+                        <input type="text"
+                               class="form-control form-control-lg"
+                               id="lbig"
+                               size="50"
+                               readonly="readonly"
+                               placeholder="">
+                    </div>
+                    <div class="form-result">
+                        <h4 class="">Угловая частота</h4>
+                        <input type="text"
+                               class="form-control form-control-lg"
+                               id="w"
+                               size="50"
+                               readonly="readonly"
+                               placeholder="">
+                    </div>
+                </div>
+                <div style="display: flex">
+                    <div class="form-result">
+                        <h4 class="">Толщина экрана</h4>
+                        <input type="text"
+                               class="form-control form-control-lg"
+                               id="M"
+                               size="50"
+                               readonly="readonly"
+                               placeholder="">
+                    </div>
+                    <div class="form-result">
+                        <h4 class="">Ослабление энергии</h4>
+                        <input type="text"
+                               class="form-control form-control-lg"
+                               id="a"
+                               size="50"
+                               readonly="readonly"
+                               placeholder="">
+                    </div>
+
+                    <div class="form-result">
+                        <h4 class="">Требуемая длина трубки</h4>
+                        <input type="text"
+                               class="form-control form-control-lg"
+                               id="lsmall"
+                               size="50"
+                               readonly="readonly"
+                               placeholder="">
+                    </div>
+                </div>
+                <div style="display: flex">
+                    <div class="form-result">
+                        <h2 class="">Тип излучения</h2>
+                        <h3 id="radiationType">
+
+                        </h3>
+                    </div>
+                </div>
             </div>
 
         </div>
