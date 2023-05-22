@@ -12,9 +12,18 @@ th {
 }
 
 .form-result {
-    margin: 30px 100px 30px 30px;
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-bottom: 50px;
 }
 
 label {
     margin-bottom: 10px;
+}
+
+p {
+    text-indent: 20px;
+    font-family: Calibri, sans-serif;
+    font-size: 20px;
 }
